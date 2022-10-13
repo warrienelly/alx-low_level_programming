@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc CFILE.c -o c
+make c 
