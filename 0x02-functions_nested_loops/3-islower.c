@@ -2,7 +2,7 @@
 
 /**
  * _islower - print alphabet from the function stated
- *
+ * @c: the character to check
  * Return: 0 or 1
  */
 int _islower(int c)
