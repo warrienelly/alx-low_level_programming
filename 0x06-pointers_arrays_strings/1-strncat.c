@@ -3,13 +3,13 @@
 /**
  * *_strncat - appends the src string to the dest string,
  * it will use at most n bytes from src; and
- * src does not need to be null-terminated 
+ * src does not need to be null-terminated
  * if it contains n or more bytes.
  *
  * @dest: resulting string
  * @src: appending string
  * @n: n most byte to return.
- * 
+ *
  * Return: Always pointer
  */
 char *_strncat(char *dest, char *src, int n)
@@ -37,7 +37,6 @@ char *_strncat(char *dest, char *src, int n)
 			len++;
 		}
 	}
-	*(dest + len) = '\0';
 	return (dest);
 
 }
