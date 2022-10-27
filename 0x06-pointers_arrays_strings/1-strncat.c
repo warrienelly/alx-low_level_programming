@@ -25,16 +25,19 @@ char *_strncat(char *dest, char *src, int n)
 	}
 
 	j = 0;
-
-	while (src[j] != '\0')
+	if (n >= 1)
 	{
-		if (j <= (n-1))
+		while (src[j] != '\0')
 		{
-			*(dest + len) = src[j];
+			if (j <= (n-1))
+			{
+				*(dest + len) = src[j];
+			}
+			j++;
+			len++;
 		}
-		j++;
-		len++;
 	}
+	*(dest + len) = '\0';
 	return (dest);
 
 }
