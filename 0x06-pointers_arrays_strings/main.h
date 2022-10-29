@@ -1,3 +1,4 @@
+char *cap_string(char *s);
 char *string_toupper(char *s);
 void reverse_array(int *a, int n);
 char *_strcat(char *dest, char *src);
