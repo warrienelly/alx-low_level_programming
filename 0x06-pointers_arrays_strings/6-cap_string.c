@@ -15,6 +15,11 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
+		if (s[0] >= 97 && s[0] <= 122)
+		{
+			s[0] = s[0] - 32;
+		}
+
 		for (sep = 0; sep < 13; sep++)
 		{
 			if (s[i] == list_sep[sep])
