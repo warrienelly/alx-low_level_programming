@@ -12,15 +12,19 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		if (*(s + i) == c)
-			return (s + i);
-		i++;
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	if (*(s + i) == c)
-		return (s + 1);
-	return (NULL);
+	/**
+	 * if c is '\0', you should return
+	 * the pointer to the '\0' of the
+	 * string s
+	*/
+	if (*s == c)
+		return (s);
+	/*return null if not found*/
+	return ('\0');
 }
