@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * *_strchr - function that returns first occurrence of
  * the character c in the string s,
@@ -19,5 +20,5 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
