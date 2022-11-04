@@ -1,30 +1,28 @@
-#include <stddef.h>
+#include <stdio.h>
 /**
- * *_strchr - function that returns first occurrence of
- * the character c in the string s,
- * or NULL if the character is not found
+ * _strchr - return first occurence address
  *
- * @s: string to work on
- * @c: character to check on string
- *
- * Return: Always pointer to c
- *
+ * @s: char*
+ * @c: char
+ *Return: char*
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+	unsigned int i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (c == s[i])
+		{
+			return (&s[i]);
+		}
+		i++;
 	}
-	/**
-	 * if c is '\0', you should return
-	 * the pointer to the '\0' of the
-	 * string s
-	*/
-	if (*s == c)
-		return (s);
-	/*return null if not found*/
-	return ('\0');
+	if (s[i] == c)
+	{
+		return (&s[i]);
+	}
+
+	return (NULL);
 }
