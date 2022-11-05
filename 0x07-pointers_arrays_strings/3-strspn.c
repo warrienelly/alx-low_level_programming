@@ -32,5 +32,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		j++;
 	}
-	return (byte_count + 1);
+	return (byte_count);
 }
