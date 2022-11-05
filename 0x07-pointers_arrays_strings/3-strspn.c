@@ -16,21 +16,28 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int byte_count = 0;
 	unsigned int i;
 	unsigned int j;
+	unsigned int flag;
 
-	j = 0;
-	while (*(accept + j) != '\0')
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		i = 0;
-		while (*(s + i) != '\0')
+		j = 0;
+		flag = 0;
+
+		while (*(accept + j) != '\0')
 		{
 			if (*(s + i) == *(accept + j))
 			{
+				flag = 1;
 				byte_count = byte_count + 1;
 				break;
 			}
-			i++;
+			j++;
 		}
-		j++;
+
+		if (flag == 0)
+			return (byte_count);
+		i++;
 	}
 	return (byte_count);
 }
